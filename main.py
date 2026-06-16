@@ -1,5 +1,5 @@
 import sys
-from todo.commands import add_task
+from todo.commands import add_task, list_tasks
 
 def main():
     if len(sys.argv) < 2:
@@ -11,6 +11,8 @@ def main():
             print("Need title: python main.py add 'купить хлеб'")
             return
         add_task(sys.argv[2])
+    elif cmd == "list":
+        list_tasks()
     else:
         print(f"Unknown command: {cmd}")
 
